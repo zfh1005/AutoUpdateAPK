@@ -22,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                UpdateManager manager = new UpdateManager(MainActivity.this);
+                // 检查软件更新
+                manager.checkUpdate();
             }
         });
     }
